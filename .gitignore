@@ -5,3 +5,9 @@
 /DNV.UserManagement.Demo/.vs/DNV.UserManagement.Demo/v16
 /DNV.UserManagement.Demo/CompanyRoleUser.AspCore3.EFCore5/bin/Debug/netcoreapp3.1
 /DNV.UserManagement.Demo/CompanyRoleUser.AspCore3.EFCore5/obj
+/DNV.UserManagement.Demo/.vs/DNV.UserManagement.Demo/DesignTimeBuild
+/DNV.UserManagement.Demo/CompanyRoleUser.AspCore5.EFCore5.MSSQL/obj
+/.vs/DNV.UserManagement.Demo
+/CompanyRoleUser.AspCore3.EFCore5/bin/Debug/netcoreapp3.1
+/CompanyRoleUser.AspCore3.EFCore5/obj
+/CompanyRoleUser.AspCore5.EFCore5.MSSQL/obj
