@@ -1,0 +1,7 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/DNV.UserManagement.Demo/.vs/DNV.UserManagement.Demo/v16
+/DNV.UserManagement.Demo/CompanyRoleUser.AspCore3.EFCore5/bin/Debug/netcoreapp3.1
+/DNV.UserManagement.Demo/CompanyRoleUser.AspCore3.EFCore5/obj
