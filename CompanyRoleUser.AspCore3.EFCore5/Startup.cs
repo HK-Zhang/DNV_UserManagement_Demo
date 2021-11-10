@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using DNVGL.Authorization.UserManagement.ApiControllers;
 using DNVGL.Authorization.UserManagement.EFCore;
+using DNVGL.Authorization.Web;
 using DNVGL.OAuth.Web;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Builder;
@@ -39,14 +40,15 @@ namespace CompanyRoleUser.AspCore3.EFCore5
                 o.Scopes = new[] { "offline_access", "https://dnvglb2cprod.onmicrosoft.com/83054ebf-1d7b-43f5-82ad-b2bde84d7b75/user_impersonation" };
                 o.CallbackPath = "/signin-oidc";
                 o.Authority = "https://login.veracity.com/dnvglb2cprod.onmicrosoft.com/B2C_1A_SignInWithADFSIdp/v2.0";
-            });
+            }, cookieOption => cookieOption.Events.AddCookieValidateHandler(services));
 
             services.AddUserManagement().UseEFCore(new EFCoreOptions
             {
                 DbContextOptionsBuilder = options => options.UseSqlServer(@"Data Source=.\SQLEXPRESS;Initial Catalog=UserManagement;Trusted_Connection=Yes;")
             });
 
-            services.AddMvc();
+
+            services.AddControllers();
             services.AddSwaggerGen(c =>
             {
                 // swagger documentaion group for User Management.
@@ -113,7 +115,11 @@ namespace CompanyRoleUser.AspCore3.EFCore5
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
+            app.UseRouting();
             app.UseAuthentication();
+            app.UseAuthorization();
+
+
             app.Use(async (context, next) =>
             {
                 if (!context.User.Identity.IsAuthenticated)
@@ -126,12 +132,6 @@ namespace CompanyRoleUser.AspCore3.EFCore5
                 }
             });
 
-
-            app.UseRouting();
-
-            app.UseAuthorization();
-
-
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
@@ -142,7 +142,9 @@ namespace CompanyRoleUser.AspCore3.EFCore5
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapRazorPages();
+                endpoints.MapDefaultControllerRoute();
             });
+
         }
     }
 }
