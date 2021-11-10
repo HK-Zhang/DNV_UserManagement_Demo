@@ -30,8 +30,8 @@ namespace CompanyRoleUser.AspCore3.EFCore5.Controllers
 
         [HttpGet]
 
-        //[PermissionAuthorize(NormalPermission.ViewWeatherForecast)]
-        [Authorize(Roles = "ViewWeatherForecast")]
+        [PermissionAuthorize(NormalPermission.ViewWeatherForecast)]
+        //[Authorize(Roles = "ViewWeatherForecast")]
         public IEnumerable<WeatherForecast> Get()
         {
             var user = HttpContext.User;

@@ -11,3 +11,5 @@
 /CompanyRoleUser.AspCore3.EFCore5/bin/Debug/netcoreapp3.1
 /CompanyRoleUser.AspCore3.EFCore5/obj
 /CompanyRoleUser.AspCore5.EFCore5.MSSQL/obj
+/ComRoleUser.AspCore6.EFCore6.MSSQL/bin/Debug/net6.0
+/ComRoleUser.AspCore6.EFCore6.MSSQL/obj

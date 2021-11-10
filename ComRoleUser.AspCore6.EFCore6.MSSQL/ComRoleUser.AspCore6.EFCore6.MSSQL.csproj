@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DNVGL.Authorization.UserManagement.ApiControllers" Version="1.0.21309.3" />
+    <PackageReference Include="DNVGL.Authorization.UserManagement.EFCore" Version="1.0.21309.3" />
+    <PackageReference Include="DNVGL.OAuth.Web" Version="1.0.21266.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="C:\Users\yxzhk\.nuget\packages\dnvgl.authorization.usermanagement.apicontrollers\1.0.21309.3\contentFiles\any\netstandard2.1\apidocs\DNVGL.Authorization.UserManagement.ApiControllers.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>
