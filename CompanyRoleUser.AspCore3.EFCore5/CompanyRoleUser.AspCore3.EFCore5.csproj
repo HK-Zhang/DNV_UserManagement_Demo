@@ -5,8 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="DNVGL.Authorization.UserManagement.ApiControllers" Version="1.0.21309.3" />
-    <PackageReference Include="DNVGL.Authorization.UserManagement.EFCore" Version="1.0.21309.3" />
+    <PackageReference Include="DNVGL.Authorization.UserManagement.ApiControllers" Version="1.0.21323.1" />
+    <PackageReference Include="DNVGL.Authorization.UserManagement.EFCore" Version="1.0.21323.1" />
     <PackageReference Include="DNVGL.OAuth.Web" Version="1.0.21266.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.12" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />

@@ -18,7 +18,7 @@ builder.Services.AddOidc(o =>
     o.Scopes = new[] { "offline_access", "https://dnvglb2cprod.onmicrosoft.com/83054ebf-1d7b-43f5-82ad-b2bde84d7b75/user_impersonation" };
     o.CallbackPath = "/signin-oidc";
     o.Authority = "https://login.veracity.com/dnvglb2cprod.onmicrosoft.com/B2C_1A_SignInWithADFSIdp/v2.0";
-}, cookieOption => cookieOption.Events.AddCookieValidateHandler(builder.Services));
+}, cookieOption => cookieOption.Events.AddCookieValidateHandler());
 
 builder.Services.AddUserManagement().UseEFCore(new EFCoreOptions
 {
